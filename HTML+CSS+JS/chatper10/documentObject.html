@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="test">1</div>
+    <div class="test">2</div>
+    <div class="test">3</div>
+    <div class="test">4</div>
+    <div class="test">5</div>
+
+    <script>
+      const list1 = document.getElementsByClassName('test');
+      console.log(list1);
+
+      const list2 = document.querySelectorAll('.test');
+      console.log(list2);
+
+      const input = document.querySelector('#input');
+      const img = document.querySelector('#img');
+
+      input.name = 'aaa';
+      input.type = 'number';
+      input.value = 1000;
+
+      img.src = 'https://placehod.co/400x200';
+    </script>
+  </body>
+</html>

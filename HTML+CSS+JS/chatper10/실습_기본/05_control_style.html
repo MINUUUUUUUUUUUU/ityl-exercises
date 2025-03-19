@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        // document.body.style.backgroundColor = 'red';
+
+        let result = '';
+        for (let i = 0; i < 100; i++) {
+          result += '<div></div>';
+        }
+        document.body.innerHTML = result;
+
+        let pages = document.querySelectorAll('div');
+
+        for (let j = 0; j < 100; j++) {
+          let page = pages[j];
+
+          page.style.height = '1px';
+          page.style.backgroundColor = 'rgb(' + j + ',' + j + ',' + j + ')';
+        }
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
