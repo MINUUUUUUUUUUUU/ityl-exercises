@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      금액: <input type="text" v-model="amount" /><br />
+      <button>입금</button>
+      <button>인출</button>
+      <br />
+      <h3>계좌 잔고: [{{balance}}]</h3>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      const vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            amount: 0,
+            balance: 0,
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
