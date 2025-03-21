@@ -27,7 +27,6 @@
       #input textarea {
         width: 100%;
         height: 150px;
-        padding: 10px;
         font-size: 14px;
         border: 1px solid #ccc;
         border-radius: 4px;
@@ -67,6 +66,7 @@
       td {
         padding: 10px;
         text-align: left;
+        white-space: pre-wrap;
       }
 
       #history th {
@@ -132,7 +132,7 @@
           addHistory() {
             let content = this.input;
             console.log(content);
-            this.history.push(this.input);
+            this.history.unshift(this.input);
             this.input = '';
           },
           nextLine() {
