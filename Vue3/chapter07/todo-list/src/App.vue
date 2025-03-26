@@ -87,11 +87,6 @@ export default {
       // 정렬된 todoList 반환
       return this.todolist;
     },
-
-    completedCount() {
-      // todolist의 요소 중 completed 가 true인 요소만 남긴 배열 반환
-      return this.todolist.filter((todo) => todo.completed).length;
-    },
   },
 };
 </script>
