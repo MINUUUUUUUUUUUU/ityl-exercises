@@ -19,7 +19,7 @@
 <script setup>
 import { reactive } from 'vue';
 import axios from 'axios';
-import { useRoute, useRouter } from 'vue-router';
+import { useRouter } from 'vue-router';
 
 const state = reactive({
   todo: {

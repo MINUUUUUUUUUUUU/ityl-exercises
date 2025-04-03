@@ -24,10 +24,10 @@ import { computed } from 'vue';
 const props = defineProps({ todolist: { type: Array, required: true } });
 const emit = defineEmits(['completed-count']);
 
-const completedCountHandler = computed(() => {
-  emit('completed-count', props.todolist);
-  todolist = '';
-});
+// const completedCountHandler = computed(() => {
+//   emit('completed-count', props.todolist);
+//   todolist = '';
+// });
 
 const completedCount = computed(() => {
   // todolist의 요소 중 completed 가 true인 요소만 남긴 배열 반환
