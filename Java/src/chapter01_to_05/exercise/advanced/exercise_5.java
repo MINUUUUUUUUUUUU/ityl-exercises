@@ -1,4 +1,4 @@
-package chapter05.exercise.advanced;
+package chapter01_to_05.exercise.advanced;
 
 public class exercise_5 {
     public static void main (String[] args) {
