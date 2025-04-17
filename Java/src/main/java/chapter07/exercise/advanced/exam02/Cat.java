@@ -1,0 +1,8 @@
+package chapter07.exercise.advanced.exam02;
+
+public class Cat extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("야옹");
+    }
+}
