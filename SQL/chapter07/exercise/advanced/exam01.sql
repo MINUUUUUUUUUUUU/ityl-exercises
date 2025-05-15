@@ -27,24 +27,24 @@ use employees;
 select a.emp_no, a.first_name, a.last_name, b.title from employees as a
 join titles as b on a.emp_no = b.emp_no
 join dept_emp as c on a.emp_no = c.emp_no
-where c.to_date > current_time;
+where b.to_date > current_time and c.to_date > current_time;
 
 # 현재 재직 중인 직원 정보를 출력하세요
 # ○ 출력항목: 직원의 기본 정보 모두, title, salary
-select a.*, b.title, d.salary from employees as a
+select a.emp_no, birth_date, first_name, last_name, gender, hire_date, b.title, d.salary from employees as a
 join titles as b on a.emp_no = b.emp_no
 join dept_emp as c on a.emp_no = c.emp_no
 join salaries as d on a.emp_no = d.emp_no
-where c.to_date > current_time;
+where b.to_date> current_time and c.to_date > current_time and d.to_date > current_time;
 
 # 현재 재직중인 직원의 정보를 출력하세요.
 # ○ 출력항목: emp_no, first_name, last_name, department
 # ○ 정렬: emp_no 오름 차순
-select a.emp_no, a.first_name, a.last_name, d.dept_name from employees as a
+select c.emp_no, a.first_name, a.last_name, d.dept_name from employees as a
 join titles as b on a.emp_no = b.emp_no
 join dept_emp as c on a.emp_no = c.emp_no
 join departments as d on c.dept_no = d.dept_no
-where c.to_date > current_time
+where b.to_date> current_time and c.to_date > current_time
 order by emp_no;
 
 # 부서별 재직중인 직원의 수를 출력하세요.
@@ -54,7 +54,7 @@ select c.dept_no, d.dept_name, count(a.emp_no) from employees as a
 join titles as b on a.emp_no = b.emp_no
 join dept_emp as c on a.emp_no = c.emp_no
 join departments as d on c.dept_no = d.dept_no
-where c.to_date > current_time
+where b.to_date> current_time and c.to_date > current_time
 group by c.dept_no
 order by c.dept_no;
 
@@ -64,4 +64,4 @@ select distinct a.emp_no, a.first_name, a.last_name, d.dept_name, c.from_date, c
 join titles as b on a.emp_no = b.emp_no
 join dept_emp as c on a.emp_no = c.emp_no
 join departments as d on c.dept_no = d.dept_no
-where a.emp_no = 10209;
+where a.emp_no = 10209 ;
