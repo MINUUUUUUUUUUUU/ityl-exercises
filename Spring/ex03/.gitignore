@@ -1,9 +1,3 @@
-
-
-etc/
-*.zip
-translate/
-
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
@@ -22,19 +16,6 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-### Java ###
-*.class
-*.jar
-*.war
-*.ear
-
-### log ###
-*.log
-
-### 임시파일 ###
-*.tmp
-*.wsp
-
 ### Eclipse ###
 .apt_generated
 .classpath
@@ -46,14 +27,16 @@ out/
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
+
 ### VS Code ###
 .vscode/
+
 ### Mac OS ###
 .DS_Store
-
